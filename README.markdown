@@ -16,5 +16,5 @@ $ bundle install
 now you should be set to start the application   
 $ rails server
 
-you cat look at my rspec stuff via   
+you can look at my rspec stuff via   
 $ rspec spec/
