@@ -13,7 +13,7 @@ $ gem install bundle
 change into the microblog directory and install all the other gems using bundle   
 $ bundle install
 
-no you should be set to start the application   
+now you should be set to start the application   
 $ rails server
 
 you cat look at my rspec stuff via   
