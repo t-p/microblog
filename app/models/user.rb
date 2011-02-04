@@ -15,6 +15,8 @@ class User < ActiveRecord::Base
   attr_accessor :password
   attr_accessible :name, :email, :password, :password_confirmation
 
+  has_many :microposts, :dependent => :destroy
+
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
   validates :name,  :presence   => true,
@@ -46,6 +48,11 @@ class User < ActiveRecord::Base
     (user && user.salt == cookie_salt) ? user : nil
   end
 
+  def feed
+    # This is preliminary. See Chapter 12 for the full implementation.
+    Micropost.where("user_id = ?", id)
+  end
+
   # next 3 are just exercises
   
   def User.authenticate(email, submitted_password)
@@ -72,6 +79,7 @@ class User < ActiveRecord::Base
     end
   end
 
+  
   private
   
     def encrypt_password
