@@ -1,11 +1,12 @@
 MicroBlog
 =========
 - - - -
-My attempt to write a web based flickr client...  
-Right now it's nothing more than static pages and user validation.  
-When it becomes somewhat usable i will deploy it on heroku.   
-What's holding me back is writing tests for valid links and user.   
-If you want to test the program follow these simple steps to get it running:   
+My attempt to write a microblog...  
+You can test the application on heroku:
+http://smooth-river-747.heroku.com/
+All user handling is fully tested using Rspec. 
+If you want to look at the code just clone this 
+repository and follow these simple steps.
 - - - -
 install bundle   
 $ gem install bundle 
